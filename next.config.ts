@@ -1,9 +1,12 @@
 import {withSentryConfig} from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
+
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  /* config options here */ 
+
+  }
+
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
@@ -12,6 +15,9 @@ export default withSentryConfig(nextConfig, {
 org: "jatinshankarchatterjee",
 project: "testapp",
 
+sourcemaps: {
+  disable: true,
+},
 // Only print logs for uploading source maps in CI
 silent: !process.env.CI,
 
