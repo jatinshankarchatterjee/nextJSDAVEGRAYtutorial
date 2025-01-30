@@ -8,19 +8,17 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Headerdash />
-          {children}
-        </ThemeProvider>
-        <Toaster/>
-      </body>
-    </html>
+    <div className="flex flex-col h-screen">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <Headerdash />
+        {children}
+      </ThemeProvider>
+      <Toaster />
+    </div>
   );
 }
