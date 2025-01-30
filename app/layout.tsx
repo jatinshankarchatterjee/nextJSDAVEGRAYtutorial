@@ -12,7 +12,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (<AuthProvider>    <html lang="en" suppressHydrationWarning>
+  return (<AuthProvider>   
+     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
