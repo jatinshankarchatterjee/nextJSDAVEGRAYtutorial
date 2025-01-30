@@ -1,12 +1,18 @@
 import React from "react";
-import Headerhome from "@/components/header-home";
+import Link from "next/link"; 
+import { LayoutDashboardIcon } from "lucide-react";
 export default function Home() {
   return (
-    <><Headerhome />
-    <div className="flex h-svh justify-center items-center">
-        <h1 className="text-5xl font-bold underline">
+    <div className="flex flex-col h-svh justify-center items-center">
+        <h1 className="text-4xl font-bold ">
           Hello @ Dave&apos;s repair shop</h1>
+
+        <Link href="/dashboard" className="flex items-center gap-2 mt-20">
+        <span>Proceed to Dashboard &nbsp;</span>
+          <LayoutDashboardIcon />
+          
+        </Link>
     </div>
-    </>
+    
   );
 }
