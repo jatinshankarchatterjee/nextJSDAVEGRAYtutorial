@@ -1,11 +1,13 @@
 import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
+import { sign } from "crypto";
+import { redirect } from "next/dist/server/api-utils";
 import { NextRequest } from "next/server";
 
 export default withAuth(
   async function middleware(req: NextRequest) {
     return withAuth(req);
   },
-  { redirect: "/dashboard" }
+  { isReturnToCurrentPage:false}
 );
 
 export const config = {
